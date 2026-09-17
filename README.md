@@ -7,7 +7,7 @@ Sistema operativo web para productoras de eventos, culturales y experiencias.
 - **Frontend:** HTML5 + Preact + HTM
 - **Estilos:** Tailwind CSS (CDN) + CSS personalizado
 - **Estado:** LocalStorage del navegador
-- **Deploy:** Render Static Site (gratuito)
+- **Deploy:** Netlify (gratuito)
 
 ## Estructura
 
@@ -21,20 +21,17 @@ Sistema operativo web para productoras de eventos, culturales y experiencias.
 - `styles.css` — estilos, glitter, dark mode
 - `los_cabos_marketing.js` — página estática de Campaña Los Cabos
 
-## Despliegue en Render (gratis)
+## Despliegue en Netlify (gratis)
 
-1. Crea un repositorio en GitHub y sube estos archivos.
-2. Entra a [render.com](https://render.com) → **New** → **Static Site**.
-3. Conecta tu repositorio de GitHub.
-4. Configuración:
-   - **Name:** `amarea-os` (o el que quieras)
-   - **Branch:** `main`
-   - **Build Command:** dejar vacío
+1. Entra a [app.netlify.com](https://app.netlify.com) → **Add new site** → **Import an existing project**.
+2. Elige **GitHub** y selecciona el repositorio `amarea-os`.
+3. Netlify detecta `netlify.toml` automáticamente:
+   - **Build command:** vacío
    - **Publish directory:** `.`
-5. Haz clic en **Create Static Site**.
-6. Render te dará una URL tipo `https://amarea-os.onrender.com`.
+4. Haz clic en **Deploy site**.
+5. Netlify te dará una URL tipo `https://amarea-os.netlify.app` (puedes cambiar el nombre en **Site settings** → **Change site name**).
 
-Si usas `render.yaml`, Render detectará la configuración automáticamente al conectar el repo.
+Cada `git push` a `main` redespliega el sitio automáticamente.
 
 ## Notas
 
